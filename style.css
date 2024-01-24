@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --main-color: #0A3871;
+    --secondary-color: #495057;
+    --bg-color: #e6eaf7;
+    --btn-color: #D8DFE8;
+    --color-p: #343A40;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg-color);
+    /* height: 100vh; */
+}
+
+main{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    /* background-color: #0A3871; */
+}
+
+.main-container{
+    height: 80%;
+    margin-top: 60px;
+    margin-right: 80px;
+    /* background-color: red; */
+}
+
+.logo{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo svg{
+    width: 120px;
+    height: 48px;
+}
+
+.container{
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+    height: 100vh;
+}
+
+.container-text{
+    width: 80%;
+}
+
+.container-text textarea{
+    background-color: var(--bg-color);
+    border: 0px solid var(--main-color);
+    box-sizing: border-box;
+    font-family: Inter;
+    color: var(--main-color);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    outline: none;
+    resize: none;
+}
+
+.message{
+    width: 80%;
+    display: inline-flex;
+    align-items: center;
+gap: 8px;
+    height: 28px;
+}
+
+.message i{
+    width: 16px;
+    height: 16px;
+    color: var(--secondary-color);
+}
+
+.message p{
+    font-family: Inter;
+    color: var(--secondary-color);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.container-buttons{
+    display: flex;
+    margin-top: 16px;
+    width: 80%;
+    gap: 20px;
+}
+
+.btn{
+    display: flex;
+    width: 328px;
+    padding: 24px;
+    align-items: flex-start;
+    gap: 8px;
+    flex-shrink: 0;
+    border-radius: 24px;
+    border: 1px solid var(--main-color);
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.btn-encriptar{
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.btn-desencriptar{
+    color: var(--main-color);
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+.btn-encriptar:hover{
+    background-color: #1f5699;
+}
+
+.btn-desencriptar:hover{
+    background-color: #d5d5d5;
+}
+
+
+aside{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 32px;
+    height: 95vh;
+    margin: auto 0;
+}
+
+aside img{
+    width: 336px;
+    max-width: 400px;
+    height: 304px;
+}
+
+aside p{
+    display: block;
+    margin: 0 auto;
+}
+
+.any-message{
+    margin-top: 25px;
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    color: #343A40;
+    align-self: stretch;
+    width: 336px;
+}
+
+.input-text{
+    color:#495057;
+    margin-top: 16px;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    align-self: stretch;
+    line-height: 150%;
+    width: 336px;
+    align-self: stretch;
+}
