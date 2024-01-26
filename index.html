@@ -24,23 +24,31 @@
             </a>
             <div class="main-container">
                 <div class="container-text">
-                    <textarea name="text" id="text" cols="35" rows="10" placeholder="Ingrese el texo aqui"></textarea>
+                    <textarea class="textarea" name="text" id="text" cols="35" rows="10" placeholder="Ingrese el texo aqui"></textarea>
                 </div>
-                <div class="message">
-                    <i class="fa-solid fa-circle-exclamation"></i>
-                    <p>Solo letras minusculas y sin acento</p>
+                <div class="message" id="container-error">
+                    <i class="fa-solid fa-circle-exclamation" id="i-error"></i>
+                    <p id="message-error">Solo letras minusculas y sin acento</p>
                 </div>
                 <div class="container-buttons">
-                    <button class="btn btn-encriptar">Encriptar</button>
-                    <button class="btn btn-desencriptar">Desencriptar</button>
+                    <button onclick="handleEncriptar()" class="btn btn-encriptar">Encriptar</button>
+                    <button onclick="handleDesencriptar()" class="btn btn-desencriptar">Desencriptar</button>
                 </div>
             </div>
         </main>
-        <aside>
-            <img src="img/muñeco.svg" alt="imagen de muñeco">
-            <p class="any-message">Ningún mensaje fue encontrado</p>
-            <p class="input-text">Ingresa el texto que desees encriptar o desencriptar.</p>
-        </aside>
+        <div class="container-empty">
+            <div class="converter-empty" id="area-empty">
+                <img src="img/muñeco.svg" alt="imagen de muñeco">
+                <p class="any-message">Ningún mensaje fue encontrado</p>
+                <p class="input-text">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <div class="converter-text" id="area-encripted">
+                <textarea name="message-encripted" id="message-encripted" cols="20" rows="10" class="textarea-encripted"></textarea>
+                <button onclick="btnCopy()" class="btn btn-copy" id="btn-copyArea">Copiar</button>
+            </div>
+        </div>
     </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
