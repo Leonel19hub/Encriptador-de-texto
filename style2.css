@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --purple-heart-50: #f5f0ff;
+    --purple-heart-100: #ede4ff;
+    --purple-heart-200: #ddcdff;
+    --purple-heart-300: #c6a5ff;
+    --purple-heart-400: #ac72ff;
+    --purple-heart-500: #963aff;
+    --purple-heart-600: #8f12ff;
+    --purple-heart-700: #8301ff;
+    --purple-heart-800: #6800cb;
+    --purple-heart-900: #5b02b0;
+    --purple-heart-950: #370078;
+
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg-color);
+}
+
+@media only screen and (max-width: 480px) {
+    .container{
+        /* background-color: red; */
+        height: 100%;
+        width: 100%;
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    main{
+        width: 100%;
+    }
+
+}

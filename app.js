@@ -16,12 +16,11 @@ const handleEncriptar = () => {
     // Verificar si el textarea está vacío
     if (textTextArea.trim() === "") {
         let error = document.getElementById("message-error");
-        console.log(error);
         let iconError = document.getElementById("i-error");
         error.textContent = "Por favor ingrese algo antes de encriptar";
         error.style.color = "red";
         iconError.style.color = "red";
-        return; // Salir de la función si el textarea está vacío
+        return;
     }
     
     newWord = "";
@@ -37,6 +36,7 @@ const handleEncriptar = () => {
     }
     hiddenAndShowDiv(newWord);
     document.getElementById("text").value = "";
+    document.getElementById("btn-copyArea").textContent = "Copiar"
 }
 
 const desencriptarMensaje = mensaje => {
@@ -53,7 +53,6 @@ const handleDesencriptar = () => {
     // Verificar si el textarea está vacío
     if (textTextArea.trim() === "") {
         let error = document.getElementById("message-error");
-        console.log(error);
         let iconError = document.getElementById("i-error");
         error.textContent = "Por favor ingrese algo antes de desencriptar";
         error.style.color = "red";
@@ -68,6 +67,7 @@ const handleDesencriptar = () => {
     
     hiddenAndShowDiv(messageDecrypted);
     document.getElementById("text").value = "";
+    document.getElementById("btn-copyArea").textContent = "Copiar"
 }
 
 
@@ -87,12 +87,13 @@ function validarTexto(texto) {
     let botonEncriptar = document.querySelector(".btn-encriptar");
     let btnDecrypted = document.querySelector(".btn-desencriptar");
     // Verificar si el texto contiene letras mayúsculas o con tilde
-    if (/[A-ZÁÉÍÓÚÜ]/.test(texto)) {
+    if (/[A-ZÁÉÍÓÚÜáéíóúü]/.test(texto)) {
         error.textContent = "Solo letras minusculas y sin acento";
         error.style.color = "red";
         iconError.style.color = "red";
         botonEncriptar.disabled = true;
         btnDecrypted.disabled = true;
+        // document.getElementById("btn-copyArea").textContent = "Copiar"
     }
     else{
         error.textContent = "Solo letras minusculas y sin acento";
@@ -100,6 +101,7 @@ function validarTexto(texto) {
         iconError.style.color = "#495057";
         botonEncriptar.disabled = false;
         btnDecrypted.disabled = false;
+        // document.getElementById("btn-copyArea").textContent = "Copiar"
     }
 }
 
