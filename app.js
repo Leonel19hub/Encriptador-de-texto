@@ -11,7 +11,7 @@ const hiddenAndShowDiv = mensaje => {
 }
 
 const handleEncriptar = () => {
-    textTextArea = document.getElementById("text").value;
+    textTextArea = document.getElementById("text-to-encrypted").value;
     
     // Verificar si el textarea está vacío
     if (textTextArea.trim() === "") {
@@ -35,7 +35,7 @@ const handleEncriptar = () => {
         }
     }
     hiddenAndShowDiv(newWord);
-    document.getElementById("text").value = "";
+    document.getElementById("text-to-encrypted").value = "";
     document.getElementById("btn-copyArea").textContent = "Copiar"
 }
 
@@ -49,7 +49,7 @@ const desencriptarMensaje = mensaje => {
 }
 
 const handleDesencriptar = () => {
-    textTextArea = document.getElementById("text").value;
+    textTextArea = document.getElementById("text-to-encrypted").value;
     // Verificar si el textarea está vacío
     if (textTextArea.trim() === "") {
         let error = document.getElementById("message-error");
@@ -61,18 +61,18 @@ const handleDesencriptar = () => {
     }
 
     document.getElementById("message-encripted").value = "";
-    textTextArea = document.getElementById("text").value;
+    textTextArea = document.getElementById("text-to-encrypted").value;
 
     let messageDecrypted = desencriptarMensaje(textTextArea)
     
     hiddenAndShowDiv(messageDecrypted);
-    document.getElementById("text").value = "";
+    document.getElementById("text-to-encrypted").value = "";
     document.getElementById("btn-copyArea").textContent = "Copiar"
 }
 
 
 // Obtener el elemento del textarea
-const textArea = document.getElementById("text");
+const textArea = document.getElementById("text-to-encrypted");
 
 // Agregar un evento de escucha para el evento "input"
 textArea.addEventListener("input", function(event) {
@@ -112,4 +112,3 @@ const btnCopy = () => {
 
     document.getElementById("btn-copyArea").textContent = "Copiado"
 }
-
